@@ -36,11 +36,19 @@ If you only want to generate descriptors for protein structures, you can run the
 conda activate FoldExplorer
 python extract.py -q examples
 ```
-The program will automatically create a temporary folder './tmp/' to store temporary files and an output folder './output/' to store the results. More details can be seen by running:
+The program will automatically create a temporary folder ```./tmp/``` to store temporary files and an output folder ```./output/``` to store the results. More details can be seen by running:
 ```python
 python extract.py -h
 ```
 The format of descriptor files are end with ```.pkl``` in the ```output folder```. you can check it in python3 as following:
+```bash
+$ python3
+>>> import pickle
+>>> with open("output/descriptors.pkl", "rb") as p:
+...     d = pickle.load(p)
+...     print(d)
+```
+If the protein structure files are too many (>10,000), they will be divided into several small descriptor files. 
 
 
 
