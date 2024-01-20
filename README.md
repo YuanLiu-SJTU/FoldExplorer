@@ -40,6 +40,7 @@ The program will automatically create a temporary folder './tmp/' to store tempo
 ```python
 python extract.py -h
 ```
+The format of descriptor files are end with ```.pkl``` in the ```output folder```. you can check it in python3 as following:
 
 
 
