@@ -36,3 +36,10 @@ If you only want to generate descriptors for protein structures, you can run the
 conda activate FoldExplorer
 python extract.py -q examples
 ```
+The program will automatically create a temporary folder './tmp/' to store temporary files and an output folder './output/' to store the results. More details can be seen by running:
+```python
+python extract.py -h
+```
+
+
+
