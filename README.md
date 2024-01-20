@@ -24,6 +24,15 @@ And then install other requirements simply run:
 ```bash
 pip install -r requirements.txt
 ```
+When you want to quit the virtual environment, just:
+```bash
+conda deactivate FoldExplorer
+```
+
 ## Usage
 ### Generate descriptors for protein structures using FoldExplorer
-
+If you only want to generate descriptors for protein structures, you can run the command as following
+```
+conda activate FoldExplorer
+python extract.py -q examples
+```
