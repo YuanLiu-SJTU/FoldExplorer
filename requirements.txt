@@ -1,0 +1,4 @@
+biopython==1.81
+einops==0.6.1
+fair-esm==2.0.0
+torch_geometric==2.3.1
