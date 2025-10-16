@@ -223,7 +223,8 @@ class GAT:
         dv_dot = np.sum(dv_1 * dv_2, axis=1)
         dv_norm = np.linalg.norm(dv_1, axis=1) * np.linalg.norm(dv_2, axis=1)
         pad_dv_norm = np.zeros((xyz.shape[0]))
-        pad_dv_norm[1:-1] = cos_angle = np.divide(dv_dot, dv_norm, out=np.zeros_like(dv_dot), where=dv_norm > 1e-8)
+        cos_angle = np.divide(dv_dot, dv_norm, out=np.zeros_like(dv_dot), where=dv_norm > 1e-8)
+        pad_dv_norm[1:-1] = cos_angle
         return pad_dv_norm.reshape((-1, 1))
 
     def split_query_list(self):
